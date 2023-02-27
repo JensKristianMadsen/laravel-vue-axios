@@ -37,10 +37,10 @@
 -->
                    <div class="col-span-1 sm:col-span-1  lg:col-span-1">
                     <label for="region" class="block text-sm font-medium text-gray-700">Repeated</label>
-                    <input type="checkbox" name="region" id="region" autocomplete="address-level1" class="mt-1 block w-full  rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    <input  type="checkbox" name="region" id="region" autocomplete="address-level1" class="mt-1 block w-full  rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                   </div>
     
-                  <div class="col-span-1 sm:col-span-1 lg:col-span-1">
+                  <div v-if="repeatedOn" @click="repeatedOn(false)" class="col-span-1 sm:col-span-1 lg:col-span-1">
                     <label for="country" class="block text-sm font-medium text-gray-700">Select - repeated</label>
                     <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
                       <option>Every day (monday to fredag)</option>
@@ -71,7 +71,9 @@ export default {
   emits: ["reloadlist"],
     data: function() {
         return {
-        //  time:'',
+
+          repeatedOn:false,
+       
             item: {
             
                 name: '',
@@ -100,6 +102,11 @@ export default {
                     console.log(error);
                 });
         },
+        doRepeated(repeatedOn){
+          this.repeatedOn = repeatedOn
+      
+        }
+        ,
         customDate(data){
            // this.date = moment(data).format('YYYY-MM-DD')
             this.date = moment(data).format('DD-MM-YYYY')

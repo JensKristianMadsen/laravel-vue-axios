@@ -40,7 +40,9 @@
         <div id="tasks" class="my-5">
             <div id="task" class="flex justify-between items-center border-b border-slate-200 py-3 px-2 border-l-4  border-l-transparent">
                 <div class="inline-flex items-center space-x-2">
-                   
+
+                    <p v-if="items.length === 0 ">Nice job! You've bought all your todolist</p>
+                    
                     <div > <list-item
                 :item="item"
                 v-on:itemchanged="$emit('reloadlist')"
