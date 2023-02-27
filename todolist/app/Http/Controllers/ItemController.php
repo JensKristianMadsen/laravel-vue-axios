@@ -38,6 +38,7 @@ class ItemController extends Controller
     {
         $newItem = new Item;
         $newItem->name = $request->item['name'];
+        $newItem->date = $request->item['date'];
         $newItem->save();
 
         return $newItem;
