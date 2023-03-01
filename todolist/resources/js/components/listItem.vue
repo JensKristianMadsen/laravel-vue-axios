@@ -6,9 +6,15 @@
             v-model="item.completed"
             class="mr-3"
         />
-        <span :class="[item.completed ? 'completed' : '', 'item']">{{
-            item.name
-        }}</span>
+        <span :class="[item.completed ? 'completed' : '', 'item']">
+            {{
+                item.name
+            }}
+            {{
+                item.date
+            }}
+        </span>
+
 
         <button>  
             <div class="btn-danger ml-3" @click="removeItem()">

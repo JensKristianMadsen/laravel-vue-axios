@@ -20,12 +20,14 @@
             
                   <div class="col-span-1 sm:col-span-1 lg:col-span-1">
                     <label for="city" class="block text-sm font-medium text-gray-700">Task</label>
-                    <input type="text" v-model="item.name" name="item" id="item" autocomplete="address-level2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    <input type="text" v-model="item.name" name="item" id="item" autocomplete="address-level2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" role="alert" required>
                   </div>
+
+
     
                   <div class="col-span-1 sm:col-span-1 lg:col-span-1">
                     <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
-                    <input datepicker :format="customDate" v-model="item.date"  type="date" autocomplete="address-level1" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                    <input datepicker :format="customDate" v-model="item.date"  type="date" autocomplete="address-level1" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
                   </div>
 <!--DateAuto
                   <div class="col-span-1 sm:col-span-1 lg:col-span-1">
@@ -48,13 +50,36 @@
                       <option>Mexico</option>
                     </select> </div>
                 </div>
-              
+
 
               </div>
               <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                 <button :class="[item.name ? 'active' : 'notactive']"
                 @click="addItem()"  class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
               </div>
+<!--SaveButtom live text 
+                           
+                            <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">         
+    <span
+    class="inline-block"
+    tabindex="0"
+    data-te-toggle="popover"
+    data-te-trigger="hover focus"
+    data-te-content="Disabled popover">
+    <button   type="button"
+    :class="[item.name ? 'active' : 'notactive']"
+                @click="addItem()"  class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+      <p>Save: </p>
+     
+      {{item.name}} {{ item.date }}
+     </button>
+  </span>
+</div>
+       
+   -->
+
+
+
               
             </div>
           </form>
