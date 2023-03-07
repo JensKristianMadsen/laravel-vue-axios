@@ -13,9 +13,20 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link href="/css/app.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="antialiased">
+    <!---->
+
+
+    <div id='app'>
+        <App />
+        <app />
+    </div>
+    <!---->
+
+
 
     <div class="container">
         <h1>FullCalender</h1>
@@ -142,7 +153,7 @@
             toastr.success(message, 'Event');
         }
     </script>
-
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
 </html>
