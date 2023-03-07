@@ -18,7 +18,7 @@
 <body>
 
     <div class="container">
-        <h1>Laravel 9 FullCalender Tutorial Example - ItSolutionStuff.com</h1>
+        <h1>FullCalender</h1>
         <div id='calendar'></div>
     </div>
 

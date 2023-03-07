@@ -1,19 +1,4 @@
 <template>
-  <!-- <div class="mt-4">
-        <h4>list view</h4>
-        <hr class="w-50 m-auto mb-3" />
-        <ul class="list-group m-auto">
-            <list-item
-                :item="item"
-                v-on:itemchanged="$emit('reloadlist')"
-                v-for="item in items"
-                :key="item.id"
-                class="m-auto my-1 text-justify text-wrap"
-            />
-        </ul>
-    </div>
-    --> 
-
 
 <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
         <div class="flex flex-row justify-between items-center">
@@ -43,13 +28,14 @@
 
                     <p v-if="items.length === 0 ">Nice job! You've bought all your todolist</p>
                     
-                    <div > <list-item
+        <div>
+             <list-item
                 :item="item"
                 v-on:itemchanged="$emit('reloadlist')"
                 v-for="item in items"
                 :key="item.id"
                 class="m-auto my-1 text-justify text-wrap"
-            />
+             />
         </div>
                 </div>
             
@@ -70,6 +56,7 @@ export default {
         listItem
     },
     props: ["items"]
+    
 };
 </script>
 

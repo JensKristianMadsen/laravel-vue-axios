@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\CategorietController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::prefix('/item')->group(function () {
     Route::put('/{id}', [ItemController::class, 'update']);
     Route::delete('/{id}', [ItemController::class, 'destroy']);
 });
+
+Route::get('/categorys', [CategorietController::class, 'category']);
