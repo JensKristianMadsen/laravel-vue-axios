@@ -10,8 +10,15 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix.js('resources/js/app.js', 'public/js').vue().sourceMaps()
+mix.js('resources/js/app.js', 'public/js').vue(
+    {
+        options: {
+            compilerOptions: {
+                isCustomElement: (tag) => ['app'].includes(tag),
+            },
+        },
+    }
+).sourceMaps()
     .postCss('resources/css/app.css', 'public/css',
         [
             require('tailwindcss'),

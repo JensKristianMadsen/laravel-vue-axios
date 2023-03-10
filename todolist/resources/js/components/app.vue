@@ -11,13 +11,21 @@
   <!--Navbar-->
   <div class="container w-100 m-auto text-center mt-3">
       <h1 class="text-danger">Laravel vue todo list</h1>
-
+<!--AddItemForm-->
       <add-item-form v-on:reloadlist="getItems()" />
+<!--AddItemForm-->
+
+<!--ListView-->
       <list-view
           :items="items"
           v-on:reloadlist="getItems()"
       />
+<!--ListView-->      
+
+
   </div>
+  <full-calendar />
+
 
 
 
@@ -27,6 +35,9 @@
 <script>
 import addItemForm from "./addItemForm";
 import listView from "./listView";
+import FullCalendar from "./FullCalendarComponent.vue";
+
+
 
 
 
@@ -35,6 +46,9 @@ export default {
   components: {
       addItemForm,
       listView,
+      FullCalendar : FullCalendar,
+
+
      
   },
 

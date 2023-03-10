@@ -12,15 +12,21 @@
     <link href="/css/app.css" rel="stylesheet">
 
 
+
 </head>
 
 <body class="antialiased">
     <div id='app'>
+
         <App />
         <app />
+
+
+
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>
+
 
 </body>
 

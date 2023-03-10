@@ -55,7 +55,7 @@
               <div class="mx-3">
                 <span class="text-green-500 font-semibold">{{notification.title}}</span>
                 <p class="text-gray-600 text-sm">{{notification.text}}</p>
-                <p class="text-gray-600 text-sm">{{item.name}}{{item.date}}</p>
+        
 
               </div>
             </div>
