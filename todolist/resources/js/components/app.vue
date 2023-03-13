@@ -24,8 +24,11 @@
 
 
   </div>
-  <full-calendar />
+  <div>
 
+
+  <full-calendar />
+</div>
 
 
 

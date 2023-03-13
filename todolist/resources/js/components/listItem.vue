@@ -6,13 +6,9 @@
           v-model="item.completed"
           class="mr-3"
       />
-      <span :class="[item.completed ? 'completed' : '', 'item']">
-          {{
-              item.name
-          }}
-          {{
-              item.date
-          }}
+      <span v-bind="$attrs"   :class="[item.completed ? 'completed' : '', 'item']">
+          {{ item.name }}
+          {{ item.date }}
       </span>
 
 
